@@ -10,7 +10,7 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class ThrottleVSDebounceVC: UIViewController {
+final class ThrottleVSDebounceVC: UIViewController {
     private lazy var textField: UITextField = {
         let textField = UITextField()
         textField.layer.borderColor = UIColor.lightGray.cgColor

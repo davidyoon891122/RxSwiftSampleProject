@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		495E50182AFB3EB70035D35E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495E50172AFB3EB70035D35E /* MenuViewController.swift */; };
+		495E501C2AFB3F910035D35E /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495E501B2AFB3F910035D35E /* MenuCell.swift */; };
+		495E50202AFB43870035D35E /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495E501F2AFB43870035D35E /* MenuModel.swift */; };
 		49D11D092AFA1A1200808030 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D11D082AFA1A1200808030 /* AppDelegate.swift */; };
 		49D11D0B2AFA1A1200808030 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D11D0A2AFA1A1200808030 /* SceneDelegate.swift */; };
 		49D11D0D2AFA1A1200808030 /* ThrottleVSDebounceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D11D0C2AFA1A1200808030 /* ThrottleVSDebounceVC.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		495E50172AFB3EB70035D35E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		495E501B2AFB3F910035D35E /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		495E501F2AFB43870035D35E /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		49D11D052AFA1A1200808030 /* RxSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D11D082AFA1A1200808030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49D11D0A2AFA1A1200808030 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,9 +58,28 @@
 		495E50142AFB3E2F0035D35E /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				49D11D0C2AFA1A1200808030 /* ThrottleVSDebounceVC.swift */,
+				495E501A2AFB3F860035D35E /* Menu */,
+				495E50192AFB3F770035D35E /* ThrottleAndDebounce */,
+				495E501F2AFB43870035D35E /* MenuModel.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		495E50192AFB3F770035D35E /* ThrottleAndDebounce */ = {
+			isa = PBXGroup;
+			children = (
+				49D11D0C2AFA1A1200808030 /* ThrottleVSDebounceVC.swift */,
+			);
+			path = ThrottleAndDebounce;
+			sourceTree = "<group>";
+		};
+		495E501A2AFB3F860035D35E /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				495E50172AFB3EB70035D35E /* MenuViewController.swift */,
+				495E501B2AFB3F910035D35E /* MenuCell.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		49D11CFC2AFA1A1200808030 = {
@@ -178,8 +203,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				49D11D0D2AFA1A1200808030 /* ThrottleVSDebounceVC.swift in Sources */,
+				495E501C2AFB3F910035D35E /* MenuCell.swift in Sources */,
+				495E50202AFB43870035D35E /* MenuModel.swift in Sources */,
 				49D11D092AFA1A1200808030 /* AppDelegate.swift in Sources */,
 				49D11D0B2AFA1A1200808030 /* SceneDelegate.swift in Sources */,
+				495E50182AFB3EB70035D35E /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
