@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ThrottleVSDebounceVC.swift
 //  RxSwiftExample
 //
 //  Created by Jiwon Yoon on 11/7/23.
@@ -10,7 +10,7 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class ViewController: UIViewController {
+class ThrottleVSDebounceVC: UIViewController {
     private lazy var textField: UITextField = {
         let textField = UITextField()
         textField.layer.borderColor = UIColor.lightGray.cgColor
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     }
 }
 
-private extension ViewController {
+private extension ThrottleVSDebounceVC {
     func setupViews() {
 
         view.backgroundColor = .systemBackground
