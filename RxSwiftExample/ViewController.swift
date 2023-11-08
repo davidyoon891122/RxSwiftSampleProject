@@ -17,6 +17,8 @@ class ViewController: UIViewController {
         textField.layer.borderWidth = 1.0
         textField.layer.cornerRadius = 4.0
 
+        textField.becomeFirstResponder()
+
         return textField
     }()
 
@@ -37,6 +39,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        bindUI()
     }
 }
 
@@ -68,6 +71,23 @@ private extension ViewController {
             $0.trailing.equalToSuperview().offset(-offset)
             $0.height.equalTo(50.0)
         }
+    }
+
+    func bindUI() {
+        submitButton.rx.tap
+            .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
+            .asDriver(onErrorJustReturn: ())
+            .drive(onNext: {
+                print("Submit Button tapped!")
+            })
+            .disposed(by: disposeBag)
+
+        textField.rx.text
+            .debounce(.milliseconds(1000), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { text in
+                print(text)
+            })
+            .disposed(by: disposeBag)
     }
 }
 
