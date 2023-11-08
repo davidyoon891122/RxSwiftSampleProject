@@ -16,9 +16,14 @@ struct MenuModel: Hashable {
 extension MenuModel {
     static let menus = [
         MenuModel(
-            menuName: "ThrottleAndDebounce",
-            menuNumber: "0001",
+            menuName: ThrottleVSDebounceVC.menuName,
+            menuNumber: ThrottleVSDebounceVC.menuNumber,
             menu: ThrottleVSDebounceVC()
+        ),
+        MenuModel(
+            menuName: RelayViewController.menuName,
+            menuNumber: RelayViewController.menuNumber,
+            menu: RelayViewController(relayViewModel: RelayViewModel())
         )
     ]
 }

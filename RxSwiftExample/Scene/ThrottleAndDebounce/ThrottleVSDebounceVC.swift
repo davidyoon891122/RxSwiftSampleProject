@@ -11,6 +11,9 @@ import RxSwift
 import RxCocoa
 
 final class ThrottleVSDebounceVC: UIViewController {
+    static let menuNumber = "0001"
+    static let menuName = "ThrottleAndDebounce"
+
     private lazy var textField: UITextField = {
         let textField = UITextField()
         textField.layer.borderColor = UIColor.lightGray.cgColor

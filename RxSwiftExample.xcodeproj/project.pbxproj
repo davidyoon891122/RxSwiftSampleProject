@@ -10,6 +10,8 @@
 		495E50182AFB3EB70035D35E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495E50172AFB3EB70035D35E /* MenuViewController.swift */; };
 		495E501C2AFB3F910035D35E /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495E501B2AFB3F910035D35E /* MenuCell.swift */; };
 		495E50202AFB43870035D35E /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495E501F2AFB43870035D35E /* MenuModel.swift */; };
+		495E50282AFB49370035D35E /* RelayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495E50272AFB49370035D35E /* RelayViewController.swift */; };
+		495E502A2AFB49EF0035D35E /* RelayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495E50292AFB49EF0035D35E /* RelayViewModel.swift */; };
 		49D11D092AFA1A1200808030 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D11D082AFA1A1200808030 /* AppDelegate.swift */; };
 		49D11D0B2AFA1A1200808030 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D11D0A2AFA1A1200808030 /* SceneDelegate.swift */; };
 		49D11D0D2AFA1A1200808030 /* ThrottleVSDebounceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D11D0C2AFA1A1200808030 /* ThrottleVSDebounceVC.swift */; };
@@ -28,6 +30,8 @@
 		495E50172AFB3EB70035D35E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		495E501B2AFB3F910035D35E /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		495E501F2AFB43870035D35E /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		495E50272AFB49370035D35E /* RelayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayViewController.swift; sourceTree = "<group>"; };
+		495E50292AFB49EF0035D35E /* RelayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayViewModel.swift; sourceTree = "<group>"; };
 		49D11D052AFA1A1200808030 /* RxSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D11D082AFA1A1200808030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49D11D0A2AFA1A1200808030 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +64,7 @@
 			children = (
 				495E501A2AFB3F860035D35E /* Menu */,
 				495E50192AFB3F770035D35E /* ThrottleAndDebounce */,
-				495E501F2AFB43870035D35E /* MenuModel.swift */,
+				495E50242AFB490D0035D35E /* Relay */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -80,6 +84,23 @@
 				495E501B2AFB3F910035D35E /* MenuCell.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		495E50212AFB487A0035D35E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				495E501F2AFB43870035D35E /* MenuModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		495E50242AFB490D0035D35E /* Relay */ = {
+			isa = PBXGroup;
+			children = (
+				495E50272AFB49370035D35E /* RelayViewController.swift */,
+				495E50292AFB49EF0035D35E /* RelayViewModel.swift */,
+			);
+			path = Relay;
 			sourceTree = "<group>";
 		};
 		49D11CFC2AFA1A1200808030 = {
@@ -103,6 +124,7 @@
 			children = (
 				49D11D1C2AFA1A1A00808030 /* Delegate */,
 				495E50142AFB3E2F0035D35E /* Scene */,
+				495E50212AFB487A0035D35E /* Model */,
 				49D11D112AFA1A1300808030 /* Assets.xcassets */,
 				49D11D132AFA1A1300808030 /* LaunchScreen.storyboard */,
 				49D11D162AFA1A1300808030 /* Info.plist */,
@@ -202,11 +224,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				495E502A2AFB49EF0035D35E /* RelayViewModel.swift in Sources */,
 				49D11D0D2AFA1A1200808030 /* ThrottleVSDebounceVC.swift in Sources */,
 				495E501C2AFB3F910035D35E /* MenuCell.swift in Sources */,
 				495E50202AFB43870035D35E /* MenuModel.swift in Sources */,
 				49D11D092AFA1A1200808030 /* AppDelegate.swift in Sources */,
 				49D11D0B2AFA1A1200808030 /* SceneDelegate.swift in Sources */,
+				495E50282AFB49370035D35E /* RelayViewController.swift in Sources */,
 				495E50182AFB3EB70035D35E /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
