@@ -10,9 +10,15 @@
 		49D11D092AFA1A1200808030 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D11D082AFA1A1200808030 /* AppDelegate.swift */; };
 		49D11D0B2AFA1A1200808030 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D11D0A2AFA1A1200808030 /* SceneDelegate.swift */; };
 		49D11D0D2AFA1A1200808030 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D11D0C2AFA1A1200808030 /* ViewController.swift */; };
-		49D11D102AFA1A1200808030 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49D11D0E2AFA1A1200808030 /* Main.storyboard */; };
 		49D11D122AFA1A1300808030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49D11D112AFA1A1300808030 /* Assets.xcassets */; };
 		49D11D152AFA1A1300808030 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49D11D132AFA1A1300808030 /* LaunchScreen.storyboard */; };
+		49D11D1F2AFA1A7700808030 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 49D11D1E2AFA1A7700808030 /* SnapKit */; };
+		49D11D212AFA1A7700808030 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 49D11D202AFA1A7700808030 /* SnapKit-Dynamic */; };
+		49D11D242AFA1A8700808030 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 49D11D232AFA1A8700808030 /* RxBlocking */; };
+		49D11D262AFA1A8700808030 /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 49D11D252AFA1A8700808030 /* RxBlocking-Dynamic */; };
+		49D11D282AFA1A8700808030 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 49D11D272AFA1A8700808030 /* RxCocoa */; };
+		49D11D2A2AFA1A8700808030 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 49D11D292AFA1A8700808030 /* RxCocoa-Dynamic */; };
+		49D11D2C2AFA1A8700808030 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 49D11D2B2AFA1A8700808030 /* RxRelay */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +26,6 @@
 		49D11D082AFA1A1200808030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49D11D0A2AFA1A1200808030 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		49D11D0C2AFA1A1200808030 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		49D11D0F2AFA1A1200808030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49D11D112AFA1A1300808030 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49D11D142AFA1A1300808030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49D11D162AFA1A1300808030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +36,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49D11D1F2AFA1A7700808030 /* SnapKit in Frameworks */,
+				49D11D242AFA1A8700808030 /* RxBlocking in Frameworks */,
+				49D11D2C2AFA1A8700808030 /* RxRelay in Frameworks */,
+				49D11D282AFA1A8700808030 /* RxCocoa in Frameworks */,
+				49D11D212AFA1A7700808030 /* SnapKit-Dynamic in Frameworks */,
+				49D11D2A2AFA1A8700808030 /* RxCocoa-Dynamic in Frameworks */,
+				49D11D262AFA1A8700808030 /* RxBlocking-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +68,22 @@
 		49D11D072AFA1A1200808030 /* RxSwiftExample */ = {
 			isa = PBXGroup;
 			children = (
-				49D11D082AFA1A1200808030 /* AppDelegate.swift */,
-				49D11D0A2AFA1A1200808030 /* SceneDelegate.swift */,
+				49D11D1C2AFA1A1A00808030 /* Delegate */,
 				49D11D0C2AFA1A1200808030 /* ViewController.swift */,
-				49D11D0E2AFA1A1200808030 /* Main.storyboard */,
 				49D11D112AFA1A1300808030 /* Assets.xcassets */,
 				49D11D132AFA1A1300808030 /* LaunchScreen.storyboard */,
 				49D11D162AFA1A1300808030 /* Info.plist */,
 			);
 			path = RxSwiftExample;
+			sourceTree = "<group>";
+		};
+		49D11D1C2AFA1A1A00808030 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				49D11D082AFA1A1200808030 /* AppDelegate.swift */,
+				49D11D0A2AFA1A1200808030 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +102,15 @@
 			dependencies = (
 			);
 			name = RxSwiftExample;
+			packageProductDependencies = (
+				49D11D1E2AFA1A7700808030 /* SnapKit */,
+				49D11D202AFA1A7700808030 /* SnapKit-Dynamic */,
+				49D11D232AFA1A8700808030 /* RxBlocking */,
+				49D11D252AFA1A8700808030 /* RxBlocking-Dynamic */,
+				49D11D272AFA1A8700808030 /* RxCocoa */,
+				49D11D292AFA1A8700808030 /* RxCocoa-Dynamic */,
+				49D11D2B2AFA1A8700808030 /* RxRelay */,
+			);
 			productName = RxSwiftExample;
 			productReference = 49D11D052AFA1A1200808030 /* RxSwiftExample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +139,10 @@
 				Base,
 			);
 			mainGroup = 49D11CFC2AFA1A1200808030;
+			packageReferences = (
+				49D11D1D2AFA1A7700808030 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				49D11D222AFA1A8700808030 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 49D11D062AFA1A1200808030 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +159,6 @@
 			files = (
 				49D11D152AFA1A1300808030 /* LaunchScreen.storyboard in Resources */,
 				49D11D122AFA1A1300808030 /* Assets.xcassets in Resources */,
-				49D11D102AFA1A1200808030 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +178,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		49D11D0E2AFA1A1200808030 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49D11D0F2AFA1A1200808030 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		49D11D132AFA1A1300808030 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +320,7 @@
 				INFOPLIST_FILE = RxSwiftExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +348,7 @@
 				INFOPLIST_FILE = RxSwiftExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -363,6 +386,63 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		49D11D1D2AFA1A7700808030 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+		49D11D222AFA1A8700808030 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		49D11D1E2AFA1A7700808030 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49D11D1D2AFA1A7700808030 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		49D11D202AFA1A7700808030 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49D11D1D2AFA1A7700808030 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		49D11D232AFA1A8700808030 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49D11D222AFA1A8700808030 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		49D11D252AFA1A8700808030 /* RxBlocking-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49D11D222AFA1A8700808030 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxBlocking-Dynamic";
+		};
+		49D11D272AFA1A8700808030 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49D11D222AFA1A8700808030 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		49D11D292AFA1A8700808030 /* RxCocoa-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49D11D222AFA1A8700808030 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxCocoa-Dynamic";
+		};
+		49D11D2B2AFA1A8700808030 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49D11D222AFA1A8700808030 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 49D11CFD2AFA1A1200808030 /* Project object */;
 }
