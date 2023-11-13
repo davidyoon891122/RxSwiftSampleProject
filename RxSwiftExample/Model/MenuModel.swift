@@ -24,6 +24,12 @@ extension MenuModel {
             menuName: RelayViewController.menuName,
             menuNumber: RelayViewController.menuNumber,
             menu: RelayViewController(relayViewModel: RelayViewModel())
+        ),
+        MenuModel(
+            menuName: SubjectViewController.menuName,
+            menuNumber: SubjectViewController.menuNumber,
+            menu: SubjectViewController(viewModel: SubjectViewModel())
         )
+
     ]
 }
