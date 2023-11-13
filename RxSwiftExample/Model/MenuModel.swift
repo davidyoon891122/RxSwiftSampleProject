@@ -7,10 +7,21 @@
 
 import UIKit
 
-struct MenuModel: Hashable {
+struct MenuModel {
     let menuName: String
     let menuNumber: String
-    let menu: UIViewController
+    let instantiate: () -> UIViewController
+}
+
+extension MenuModel: Equatable, Hashable {
+    static func == (lhs: MenuModel, rhs: MenuModel) -> Bool {
+       return lhs.menuName == rhs.menuName && lhs.menuNumber == rhs.menuNumber
+   }
+
+    func hash(into hasher: inout Hasher) {
+       hasher.combine(menuName)
+       hasher.combine(menuNumber)
+   }
 }
 
 extension MenuModel {
@@ -18,17 +29,17 @@ extension MenuModel {
         MenuModel(
             menuName: ThrottleVSDebounceVC.menuName,
             menuNumber: ThrottleVSDebounceVC.menuNumber,
-            menu: ThrottleVSDebounceVC()
+            instantiate: { ThrottleVSDebounceVC() }
         ),
         MenuModel(
             menuName: RelayViewController.menuName,
             menuNumber: RelayViewController.menuNumber,
-            menu: RelayViewController(relayViewModel: RelayViewModel())
+            instantiate: { RelayViewController(relayViewModel: RelayViewModel()) }
         ),
         MenuModel(
             menuName: SubjectViewController.menuName,
             menuNumber: SubjectViewController.menuNumber,
-            menu: SubjectViewController(viewModel: SubjectViewModel())
+            instantiate: { SubjectViewController(viewModel: SubjectViewModel()) }
         )
 
     ]

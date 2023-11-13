@@ -42,7 +42,9 @@ extension MenuViewController: UITableViewDelegate {
         print(menuModel.menuName)
         print(menuModel.menuNumber)
 
-        navigationController?.pushViewController(menuModel.menu, animated: true)
+        let targetViewController = menuModel.instantiate()
+
+        navigationController?.pushViewController(targetViewController, animated: true)
     }
 }
 
