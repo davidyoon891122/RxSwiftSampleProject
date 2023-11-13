@@ -105,6 +105,8 @@ final class SubjectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        bindUI()
+        bindViewModel()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -145,6 +147,41 @@ private extension SubjectViewController {
             $0.trailing.equalToSuperview().offset(-offset)
             $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(-offset)
         }
+    }
+
+    func bindUI() {
+        behaviorButton.rx.tap
+            .asDriver()
+            .drive(onNext: { [weak self] in
+                guard let self = self else { return }
+                self.viewModel.inputs.increaseBehaviorLabel()
+            })
+            .disposed(by: disposeBag)
+
+        publishButton.rx.tap
+            .asDriver()
+            .drive(onNext:{ [weak self] in
+                guard let self = self else { return }
+                self.viewModel.inputs.increasePublishLabel()
+            })
+            .disposed(by: disposeBag)
+    }
+
+    func bindViewModel() {
+        viewModel.outputs.behaviorSubject
+            .subscribe(onNext: { [weak self] result in
+                guard let self = self else { return }
+                self.behaviorNumberLabel.text = "\(result)"
+            })
+            .disposed(by: disposeBag)
+
+
+        viewModel.outputs.publishSubject
+            .subscribe(onNext: { [weak self] result in
+                guard let self = self else { return }
+                self.publishNumberLabel.text = "\(result)"
+            })
+            .disposed(by: disposeBag)
     }
 }
 
