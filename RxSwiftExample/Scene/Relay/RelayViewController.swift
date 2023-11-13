@@ -28,7 +28,7 @@ final class RelayViewController: UIViewController {
 
     private lazy var numberTextLabel: UILabel = {
         let label = UILabel()
-        label.text = ""
+        label.text = "Default"
         label.textColor = .label
         label.textAlignment = .center
 
