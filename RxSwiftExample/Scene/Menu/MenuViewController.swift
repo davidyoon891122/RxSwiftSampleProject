@@ -39,9 +39,6 @@ final class MenuViewController: UIViewController {
 extension MenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let menuModel = MenuModel.menus[indexPath.row]
-        print(menuModel.menuName)
-        print(menuModel.menuNumber)
-
         let targetViewController = menuModel.instantiate()
 
         navigationController?.pushViewController(targetViewController, animated: true)
