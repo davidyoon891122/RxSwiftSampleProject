@@ -20,5 +20,83 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55B5FF05-B369-4FA6-BEA9-CFD65F3B7A92"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxSwiftExample/Scene/Subject/SubjectViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "SubjectViewModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "55B5FF05-B369-4FA6-BEA9-CFD65F3B7A92 - 82030fba0109fd0c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RxSwiftExample.SubjectViewModel.deinit"
+                  moduleName = "RxSwiftExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiwonyoon/iOSProject/RxSwiftExample/RxSwiftExample/Scene/Subject/SubjectViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "55B5FF05-B369-4FA6-BEA9-CFD65F3B7A92 - bd89e6606cdc2263"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RxSwiftExample.SubjectViewModel.__deallocating_deinit"
+                  moduleName = "RxSwiftExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiwonyoon/iOSProject/RxSwiftExample/RxSwiftExample/Scene/Subject/SubjectViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "55B5FF05-B369-4FA6-BEA9-CFD65F3B7A92 - 64c600ce49ed7dbb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RxSwiftExample.SubjectViewModel.__allocating_init() -&gt; RxSwiftExample.SubjectViewModel"
+                  moduleName = "RxSwiftExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiwonyoon/iOSProject/RxSwiftExample/RxSwiftExample/Scene/Subject/SubjectViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "55B5FF05-B369-4FA6-BEA9-CFD65F3B7A92 - 6ed34ff2ab223491"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RxSwiftExample.SubjectViewModel.init() -&gt; RxSwiftExample.SubjectViewModel"
+                  moduleName = "RxSwiftExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiwonyoon/iOSProject/RxSwiftExample/RxSwiftExample/Scene/Subject/SubjectViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

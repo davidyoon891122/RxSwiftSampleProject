@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		494F16C12B2477450032710B /* CombineLatestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16C02B2477450032710B /* CombineLatestViewController.swift */; };
+		494F16C62B2478EC0032710B /* CombineLatestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16C52B2478EC0032710B /* CombineLatestViewModel.swift */; };
+		494F16C92B247AC30032710B /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16C82B247AC30032710B /* UserInfoModel.swift */; };
+		494F16CC2B247AF80032710B /* AccountInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16CB2B247AF80032710B /* AccountInfoModel.swift */; };
+		494F16CE2B2481050032710B /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16CD2B2481050032710B /* ServiceProtocol.swift */; };
+		494F16D32B24818D0032710B /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16D22B24818D0032710B /* UserServiceProtocol.swift */; };
+		494F16D82B24823F0032710B /* AccountServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16D72B24823F0032710B /* AccountServiceProtocol.swift */; };
+		494F16DA2B2484680032710B /* CombineLatestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16D92B2484680032710B /* CombineLatestService.swift */; };
+		494F16DC2B24849D0032710B /* CombineLatestServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16DB2B24849D0032710B /* CombineLatestServiceProtocol.swift */; };
 		495E50182AFB3EB70035D35E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495E50172AFB3EB70035D35E /* MenuViewController.swift */; };
 		495E501C2AFB3F910035D35E /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495E501B2AFB3F910035D35E /* MenuCell.swift */; };
 		495E50202AFB43870035D35E /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495E501F2AFB43870035D35E /* MenuModel.swift */; };
@@ -29,6 +38,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		494F16C02B2477450032710B /* CombineLatestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineLatestViewController.swift; sourceTree = "<group>"; };
+		494F16C52B2478EC0032710B /* CombineLatestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineLatestViewModel.swift; sourceTree = "<group>"; };
+		494F16C82B247AC30032710B /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
+		494F16CB2B247AF80032710B /* AccountInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoModel.swift; sourceTree = "<group>"; };
+		494F16CD2B2481050032710B /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		494F16D22B24818D0032710B /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
+		494F16D72B24823F0032710B /* AccountServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceProtocol.swift; sourceTree = "<group>"; };
+		494F16D92B2484680032710B /* CombineLatestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineLatestService.swift; sourceTree = "<group>"; };
+		494F16DB2B24849D0032710B /* CombineLatestServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineLatestServiceProtocol.swift; sourceTree = "<group>"; };
 		495E50172AFB3EB70035D35E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		495E501B2AFB3F910035D35E /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		495E501F2AFB43870035D35E /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
@@ -63,6 +81,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		494F16C42B2478710032710B /* CombineLatest */ = {
+			isa = PBXGroup;
+			children = (
+				494F16C02B2477450032710B /* CombineLatestViewController.swift */,
+				494F16DD2B2485220032710B /* Service */,
+				494F16C72B247AB70032710B /* ViewModel */,
+				494F16CA2B247AEB0032710B /* Model */,
+			);
+			path = CombineLatest;
+			sourceTree = "<group>";
+		};
+		494F16C72B247AB70032710B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				494F16C52B2478EC0032710B /* CombineLatestViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		494F16CA2B247AEB0032710B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				494F16C82B247AC30032710B /* UserInfoModel.swift */,
+				494F16CB2B247AF80032710B /* AccountInfoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		494F16CF2B2481320032710B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				494F16D42B2482290032710B /* Protocol */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		494F16D42B2482290032710B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				494F16CD2B2481050032710B /* ServiceProtocol.swift */,
+				494F16D22B24818D0032710B /* UserServiceProtocol.swift */,
+				494F16D72B24823F0032710B /* AccountServiceProtocol.swift */,
+				494F16DB2B24849D0032710B /* CombineLatestServiceProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		494F16DD2B2485220032710B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				494F16D92B2484680032710B /* CombineLatestService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		495E50142AFB3E2F0035D35E /* Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +143,8 @@
 				495E50192AFB3F770035D35E /* ThrottleAndDebounce */,
 				495E50242AFB490D0035D35E /* Relay */,
 				49C251CF2B01CDAD00E399C6 /* Subject */,
+				494F16C42B2478710032710B /* CombineLatest */,
+				494F16CF2B2481320032710B /* Service */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -240,14 +315,23 @@
 			files = (
 				495E502A2AFB49EF0035D35E /* RelayViewModel.swift in Sources */,
 				49C251D12B01CF4000E399C6 /* SubjectViewModel.swift in Sources */,
+				494F16D82B24823F0032710B /* AccountServiceProtocol.swift in Sources */,
+				494F16CE2B2481050032710B /* ServiceProtocol.swift in Sources */,
 				49C251CE2B01CDAA00E399C6 /* SubjectViewController.swift in Sources */,
 				49D11D0D2AFA1A1200808030 /* ThrottleVSDebounceVC.swift in Sources */,
 				495E501C2AFB3F910035D35E /* MenuCell.swift in Sources */,
+				494F16C62B2478EC0032710B /* CombineLatestViewModel.swift in Sources */,
+				494F16DA2B2484680032710B /* CombineLatestService.swift in Sources */,
 				495E50202AFB43870035D35E /* MenuModel.swift in Sources */,
+				494F16DC2B24849D0032710B /* CombineLatestServiceProtocol.swift in Sources */,
 				49D11D092AFA1A1200808030 /* AppDelegate.swift in Sources */,
 				49D11D0B2AFA1A1200808030 /* SceneDelegate.swift in Sources */,
+				494F16C92B247AC30032710B /* UserInfoModel.swift in Sources */,
 				495E50282AFB49370035D35E /* RelayViewController.swift in Sources */,
+				494F16D32B24818D0032710B /* UserServiceProtocol.swift in Sources */,
+				494F16CC2B247AF80032710B /* AccountInfoModel.swift in Sources */,
 				495E50182AFB3EB70035D35E /* MenuViewController.swift in Sources */,
+				494F16C12B2477450032710B /* CombineLatestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,6 +40,13 @@ extension MenuModel {
             menuName: SubjectViewController.menuName,
             menuNumber: SubjectViewController.menuNumber,
             instantiate: { SubjectViewController(viewModel: SubjectViewModel()) }
+        ),
+        MenuModel(
+            menuName: CombineLatestViewController.menuName,
+            menuNumber: CombineLatestViewController.menuNumber,
+            instantiate: {
+                CombineLatestViewController()
+            }
         )
 
     ]
