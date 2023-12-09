@@ -16,6 +16,13 @@
 		494F16D82B24823F0032710B /* AccountServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16D72B24823F0032710B /* AccountServiceProtocol.swift */; };
 		494F16DA2B2484680032710B /* CombineLatestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16D92B2484680032710B /* CombineLatestService.swift */; };
 		494F16DC2B24849D0032710B /* CombineLatestServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16DB2B24849D0032710B /* CombineLatestServiceProtocol.swift */; };
+		494F16DF2B248D560032710B /* MyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16DE2B248D560032710B /* MyDataModel.swift */; };
+		494F16E12B2492130032710B /* TitleValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16E02B2492130032710B /* TitleValueView.swift */; };
+		494F16E32B24928D0032710B /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16E22B24928D0032710B /* Extension+UIViewController.swift */; };
+		494F16E52B2492BD0032710B /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16E42B2492BD0032710B /* DeviceType.swift */; };
+		494F16EA2B2492F00032710B /* UIViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16E92B2492F00032710B /* UIViewPreview.swift */; };
+		494F16ED2B2496000032710B /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16EC2B2496000032710B /* SeparatorView.swift */; };
+		494F16EF2B2497080032710B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F16EE2B2497080032710B /* Constants.swift */; };
 		495E50182AFB3EB70035D35E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495E50172AFB3EB70035D35E /* MenuViewController.swift */; };
 		495E501C2AFB3F910035D35E /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495E501B2AFB3F910035D35E /* MenuCell.swift */; };
 		495E50202AFB43870035D35E /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495E501F2AFB43870035D35E /* MenuModel.swift */; };
@@ -47,6 +54,13 @@
 		494F16D72B24823F0032710B /* AccountServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceProtocol.swift; sourceTree = "<group>"; };
 		494F16D92B2484680032710B /* CombineLatestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineLatestService.swift; sourceTree = "<group>"; };
 		494F16DB2B24849D0032710B /* CombineLatestServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineLatestServiceProtocol.swift; sourceTree = "<group>"; };
+		494F16DE2B248D560032710B /* MyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataModel.swift; sourceTree = "<group>"; };
+		494F16E02B2492130032710B /* TitleValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleValueView.swift; sourceTree = "<group>"; };
+		494F16E22B24928D0032710B /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		494F16E42B2492BD0032710B /* DeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
+		494F16E92B2492F00032710B /* UIViewPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewPreview.swift; sourceTree = "<group>"; };
+		494F16EC2B2496000032710B /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
+		494F16EE2B2497080032710B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		495E50172AFB3EB70035D35E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		495E501B2AFB3F910035D35E /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		495E501F2AFB43870035D35E /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
@@ -88,6 +102,7 @@
 				494F16DD2B2485220032710B /* Service */,
 				494F16C72B247AB70032710B /* ViewModel */,
 				494F16CA2B247AEB0032710B /* Model */,
+				494F16EB2B24933A0032710B /* CustomView */,
 			);
 			path = CombineLatest;
 			sourceTree = "<group>";
@@ -105,6 +120,7 @@
 			children = (
 				494F16C82B247AC30032710B /* UserInfoModel.swift */,
 				494F16CB2B247AF80032710B /* AccountInfoModel.swift */,
+				494F16DE2B248D560032710B /* MyDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -136,6 +152,42 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		494F16E62B2492D30032710B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				494F16E72B2492DB0032710B /* Extension */,
+				494F16E82B2492E30032710B /* Preview */,
+				494F16EE2B2497080032710B /* Constants.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		494F16E72B2492DB0032710B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				494F16E22B24928D0032710B /* Extension+UIViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		494F16E82B2492E30032710B /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				494F16E42B2492BD0032710B /* DeviceType.swift */,
+				494F16E92B2492F00032710B /* UIViewPreview.swift */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
+		494F16EB2B24933A0032710B /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				494F16E02B2492130032710B /* TitleValueView.swift */,
+				494F16EC2B2496000032710B /* SeparatorView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		495E50142AFB3E2F0035D35E /* Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +196,6 @@
 				495E50242AFB490D0035D35E /* Relay */,
 				49C251CF2B01CDAD00E399C6 /* Subject */,
 				494F16C42B2478710032710B /* CombineLatest */,
-				494F16CF2B2481320032710B /* Service */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -214,9 +265,11 @@
 				49D11D1C2AFA1A1A00808030 /* Delegate */,
 				495E50142AFB3E2F0035D35E /* Scene */,
 				495E50212AFB487A0035D35E /* Model */,
+				494F16CF2B2481320032710B /* Service */,
 				49D11D112AFA1A1300808030 /* Assets.xcassets */,
 				49D11D132AFA1A1300808030 /* LaunchScreen.storyboard */,
 				49D11D162AFA1A1300808030 /* Info.plist */,
+				494F16E62B2492D30032710B /* Tools */,
 			);
 			path = RxSwiftExample;
 			sourceTree = "<group>";
@@ -320,15 +373,22 @@
 				49C251CE2B01CDAA00E399C6 /* SubjectViewController.swift in Sources */,
 				49D11D0D2AFA1A1200808030 /* ThrottleVSDebounceVC.swift in Sources */,
 				495E501C2AFB3F910035D35E /* MenuCell.swift in Sources */,
+				494F16EF2B2497080032710B /* Constants.swift in Sources */,
 				494F16C62B2478EC0032710B /* CombineLatestViewModel.swift in Sources */,
+				494F16E52B2492BD0032710B /* DeviceType.swift in Sources */,
+				494F16E32B24928D0032710B /* Extension+UIViewController.swift in Sources */,
 				494F16DA2B2484680032710B /* CombineLatestService.swift in Sources */,
 				495E50202AFB43870035D35E /* MenuModel.swift in Sources */,
 				494F16DC2B24849D0032710B /* CombineLatestServiceProtocol.swift in Sources */,
 				49D11D092AFA1A1200808030 /* AppDelegate.swift in Sources */,
 				49D11D0B2AFA1A1200808030 /* SceneDelegate.swift in Sources */,
+				494F16DF2B248D560032710B /* MyDataModel.swift in Sources */,
 				494F16C92B247AC30032710B /* UserInfoModel.swift in Sources */,
+				494F16ED2B2496000032710B /* SeparatorView.swift in Sources */,
+				494F16EA2B2492F00032710B /* UIViewPreview.swift in Sources */,
 				495E50282AFB49370035D35E /* RelayViewController.swift in Sources */,
 				494F16D32B24818D0032710B /* UserServiceProtocol.swift in Sources */,
+				494F16E12B2492130032710B /* TitleValueView.swift in Sources */,
 				494F16CC2B247AF80032710B /* AccountInfoModel.swift in Sources */,
 				495E50182AFB3EB70035D35E /* MenuViewController.swift in Sources */,
 				494F16C12B2477450032710B /* CombineLatestViewController.swift in Sources */,

@@ -15,14 +15,12 @@ class CombineLatestService: CombineLatestServiceProtocol {
 
 extension CombineLatestService: UserServiceProtocol {
     func requestUserInfo() -> Signal<UserInfoModel> {
-        let mockItem = UserInfoModel.mockItem
-
-        return Signal.just(mockItem)
+        return Signal.just(UserInfoModel.mockItem).delay(.milliseconds(1000))
     }
 }
 
 extension CombineLatestService: AccountServiceProtocol {
     func requestAccountInfo() -> Signal<AccountInfoModel> {
-        return Signal.just(AccountInfoModel.mockItem)
+        return Signal.just(AccountInfoModel.mockItem).delay(.milliseconds(5000))
     }
 }

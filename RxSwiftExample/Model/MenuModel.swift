@@ -45,7 +45,7 @@ extension MenuModel {
             menuName: CombineLatestViewController.menuName,
             menuNumber: CombineLatestViewController.menuNumber,
             instantiate: {
-                CombineLatestViewController()
+                CombineLatestViewController(viewModel: CombineLatestViewModel(service: CombineLatestService()))
             }
         )
 

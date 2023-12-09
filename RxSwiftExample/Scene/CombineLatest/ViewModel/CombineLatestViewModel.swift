@@ -16,6 +16,7 @@ protocol CombineLatestViewModelInput {
 protocol CombineLatestViewModelOutput {
     var userInfoRelay: BehaviorRelay<UserInfoModel?> { get }
     var accountInfoRelay: BehaviorRelay<AccountInfoModel?> { get }
+    var myDataRelay: BehaviorRelay<MyDataModel?> { get }
 }
 
 protocol CombineLatestViewModelType {
@@ -31,16 +32,22 @@ class CombineLatestViewModel: CombineLatestViewModelType, CombineLatestViewModel
 
     var userInfoRelay: BehaviorRelay<UserInfoModel?> = .init(value: nil)
     var accountInfoRelay: BehaviorRelay<AccountInfoModel?> = .init(value: nil)
+    var myDataRelay: BehaviorRelay<MyDataModel?> = .init(value: nil)
+
+    private let disposeBag = DisposeBag()
 
     init(service: CombineLatestServiceProtocol) {
         self.service = service
     }
 
     func requestMyData() {
-        let combineResult = Observable.combineLatest(
+        Observable.combineLatest(
             self.service.requestUserInfo().asObservable(),
             self.service.requestAccountInfo().asObservable()) { userInfoModel, accountInfoModel in
-            print("\(userInfoModel) + \(accountInfoModel)")
+
+            return MyDataModel(userInfo: userInfoModel, accountInfo: accountInfoModel)
         }
+            .bind(to: myDataRelay)
+            .disposed(by: disposeBag)
     }
 }
