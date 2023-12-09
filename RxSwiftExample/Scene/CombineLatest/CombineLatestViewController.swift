@@ -16,10 +16,19 @@ final class CombineLatestViewController: UIViewController {
     private let userNameView = TitleValueView(title: "이름", value: "--")
     private let phoneNumberView = TitleValueView(title: "전화번호", value: "--")
 
+    private lazy var userInfoTitleLabel: UILabel = {
+        let label = UILabel()
+
+        label.text = "UserInfo"
+        label.font = .boldSystemFont(ofSize: 30)
+
+        return label
+    }()
 
     private lazy var userInfoView: UIView = {
         let view = UIView()
         [
+            userInfoTitleLabel,
             userNameView,
             phoneNumberView
         ]
@@ -27,8 +36,14 @@ final class CombineLatestViewController: UIViewController {
                 view.addSubview($0)
             }
 
-        userNameView.snp.makeConstraints {
+        userInfoTitleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(Constants.General.offset)
+            $0.leading.equalToSuperview().offset(Constants.General.offset)
+            $0.trailing.equalToSuperview().offset(-Constants.General.offset)
+        }
+
+        userNameView.snp.makeConstraints {
+            $0.top.equalTo(userInfoTitleLabel.snp.bottom).offset(Constants.General.offset)
             $0.leading.equalToSuperview().offset(Constants.General.offset)
             $0.trailing.equalToSuperview().offset(-Constants.General.offset)
         }
@@ -42,12 +57,49 @@ final class CombineLatestViewController: UIViewController {
         return view
     }()
 
+    private lazy var accountInfoTitleLabel: UILabel = {
+        let label = UILabel()
+
+        label.text = "AccountInfo"
+        label.font = .boldSystemFont(ofSize: 30)
+
+        return label
+    }()
+
+    private let accountNumberView = TitleValueView(title: "계좌번호", value: "--")
+    private let totalAssetView = TitleValueView(title: "총자산", value: "--")
+
     private lazy var accountInfoView: UIView = {
         let view = UIView()
 
+        [
+            accountInfoTitleLabel,
+            accountNumberView,
+            totalAssetView
+        ]
+            .forEach {
+                view.addSubview($0)
+            }
+
+        accountInfoTitleLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(Constants.General.offset)
+            $0.leading.equalToSuperview().offset(Constants.General.offset)
+            $0.trailing.equalToSuperview().offset(-Constants.General.offset)
+        }
+
+        accountNumberView.snp.makeConstraints {
+            $0.top.equalTo(accountInfoTitleLabel.snp.bottom).offset(Constants.General.offset)
+            $0.leading.trailing.equalTo(accountInfoTitleLabel)
+        }
+
+        totalAssetView.snp.makeConstraints {
+            $0.top.equalTo(accountNumberView.snp.bottom).offset(Constants.General.offset / 2)
+            $0.leading.trailing.equalTo(accountNumberView)
+            $0.bottom.equalToSuperview().offset(-Constants.General.offset)
+        }
+
         return view
     }()
-
 
 
     // MARK: - Variable
@@ -80,7 +132,8 @@ private extension CombineLatestViewController {
         view.backgroundColor = .systemBackground
 
         [
-            userInfoView
+            userInfoView,
+            accountInfoView
         ]
             .forEach {
                 view.addSubview($0)
@@ -90,6 +143,11 @@ private extension CombineLatestViewController {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()
+        }
+
+        accountInfoView.snp.makeConstraints {
+            $0.top.equalTo(userInfoView.snp.bottom).offset(Constants.General.offset * 2)
+            $0.leading.trailing.equalTo(userInfoView)
         }
     }
 
