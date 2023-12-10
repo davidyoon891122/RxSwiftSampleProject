@@ -101,6 +101,17 @@ final class CombineLatestViewController: UIViewController {
         return view
     }()
 
+    private lazy var searchButton: UIButton = {
+        let button = UIButton(type: .roundedRect)
+        button.setTitle("Search", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .black
+
+        button.layer.cornerRadius = 8
+
+        return button
+    }()
+
 
     // MARK: - Variable
     private let viewModel: CombineLatestViewModelType
@@ -119,6 +130,7 @@ final class CombineLatestViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         bindViewModel()
+        bindUI()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -133,7 +145,8 @@ private extension CombineLatestViewController {
 
         [
             userInfoView,
-            accountInfoView
+            accountInfoView,
+            searchButton
         ]
             .forEach {
                 view.addSubview($0)
@@ -149,6 +162,13 @@ private extension CombineLatestViewController {
             $0.top.equalTo(userInfoView.snp.bottom).offset(Constants.General.offset * 2)
             $0.leading.trailing.equalTo(userInfoView)
         }
+
+        searchButton.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(Constants.General.offset)
+            $0.trailing.equalToSuperview().offset(-Constants.General.offset)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(-Constants.General.offset)
+            $0.height.equalTo(50.0)
+        }
     }
 
     func bindViewModel() {
@@ -161,6 +181,21 @@ private extension CombineLatestViewController {
                 self.phoneNumberView.setValue(value: myData.userInfo.phoneNumber)
                 self.accountNumberView.setValue(value: myData.accountInfo.accountNumber)
                 self.totalAssetView.setValue(value: "\(myData.accountInfo.totalAsset)")
+            })
+            .disposed(by: disposeBag)
+    }
+
+    func bindUI() {
+        searchButton.rx.tap
+            .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(onNext: { [weak self] in
+                guard let self = self else { return }
+                self.userNameView.reset()
+                self.phoneNumberView.reset()
+                self.accountNumberView.reset()
+                self.totalAssetView.reset()
+                self.viewModel.inputs.requestMyData()
             })
             .disposed(by: disposeBag)
     }

@@ -76,6 +76,10 @@ class TitleValueView: UIView {
     func setValue(value: String) {
         valueLabel.text = value
     }
+
+    func reset() {
+        valueLabel.text = "--"
+    }
 }
 
 private extension TitleValueView {
