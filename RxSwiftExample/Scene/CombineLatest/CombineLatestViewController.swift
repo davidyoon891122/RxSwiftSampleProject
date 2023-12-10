@@ -154,9 +154,13 @@ private extension CombineLatestViewController {
     func bindViewModel() {
         self.viewModel.outpus.myDataRelay
             .asDriver()
-            .drive(onNext: { myData in
-                guard let myData = myData else { return }
-                print(myData)
+            .drive(onNext: { [weak self] myData in
+                guard let self = self,
+                    let myData = myData else { return }
+                self.userNameView.setValue(value: myData.userInfo.name)
+                self.phoneNumberView.setValue(value: myData.userInfo.phoneNumber)
+                self.accountNumberView.setValue(value: myData.accountInfo.accountNumber)
+                self.totalAssetView.setValue(value: "\(myData.accountInfo.totalAsset)")
             })
             .disposed(by: disposeBag)
     }
